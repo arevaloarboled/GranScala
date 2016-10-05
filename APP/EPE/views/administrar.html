@@ -1,0 +1,87 @@
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Paises">
+            <md-content class="md-padding">
+            <md-button class="md-raised md-primary md-fab" ng-click="new_pais()">
+              <md-icon>add</md-icon>
+            </md-button>
+            <div ng-repeat="pais in paises">
+            <md-card>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">{{pais.nombre}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-fab-toolbar md-direction="left">
+                <md-fab-trigger class="align-with-text">
+                  <md-button aria-label="menu" class="md-fab md-primary">
+                    <md-icon class="material-icons">menu</md-icon>
+                  </md-button>
+                </md-fab-trigger>
+      
+                <md-toolbar>
+                  <md-fab-actions class="md-toolbar-tools">
+                    <md-button aria-label="delete" class="md-icon-button" ng-click="delete_pais(pais)">
+                      <md-icon class="material-icons">delete</md-icon>
+                    </md-button>
+                    <md-button aria-label="done" class="md-icon-button"ng-click="edit_pais(pais)">
+                      <md-icon class="material-icons">mode_edit</md-icon>
+                    </md-button>
+                  </md-fab-actions>
+                </md-toolbar>
+              </md-fab-toolbar>
+            </md-card>
+        </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Ciudades">
+        <md-content class="md-padding">
+          <md-input-container>
+            <label>Pais</label>
+            <md-select ng-model="pais">
+              <md-option ng-repeat="pais in paises" value="{{pais.idpais}}">{{pais.nombre}}</md-option>
+            </md-select>
+          </md-input-container>
+          
+          <md-button class="md-raised md-primary md-fab" ng-click="new_ciudad()">
+              <md-icon>add</md-icon>
+            </md-button>
+            <div ng-repeat="ciudad in ciudades">
+            <md-card ng-show="pais==ciudad.pais_idpais">
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">{{ciudad.nombre}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-fab-toolbar md-direction="left">
+                <md-fab-trigger class="align-with-text">
+                  <md-button aria-label="menu" class="md-fab md-primary">
+                    <md-icon class="material-icons">menu</md-icon>
+                  </md-button>
+                </md-fab-trigger>
+                  
+                <md-toolbar>
+                  <md-fab-actions class="md-toolbar-tools">
+                    <md-button aria-label="delete" class="md-icon-button" ng-click="delete_ciudad(ciudad)">
+                      <md-icon class="material-icons">delete</md-icon>
+                    </md-button>
+                    <md-button aria-label="done" class="md-icon-button" ng-click="editar_ciudad(ciudad)">
+                      <md-icon class="material-icons">mode_edit</md-icon>
+                    </md-button>
+                  </md-fab-actions>
+                </md-toolbar>
+              </md-fab-toolbar>
+            </md-card>
+            </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="three">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
