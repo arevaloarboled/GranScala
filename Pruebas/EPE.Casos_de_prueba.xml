@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]> 
+</details><testsuite name="Generar Horarios" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="123" name="Generar_Horarios">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[23]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Generar horarios para la proxima semana</p>]]></summary>
+	<preconditions><![CDATA[<p>Admnistrador eesta en la p&aacute;gina con su sesi&oacute;n iniciada</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Selecionar menu de horarios</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar p&aacute;gina de horarios</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar pais, supermercado y local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar horarios de dicho local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Modificar las horas de cada turno asignado a cada d&iacute;a</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de confirmar cambios</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	guardar cambios en el horario de local seleccionado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	para confirmar los cambios, se deben haber cambiado los campos de horarios en las casillas cambiadas</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="130" name="Toma_de_turno_de_regalo">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[18]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	usuario tomar&aacute; un turno que se publico para regalo</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Estar logeado en la pag&iacute;na y en la p&aacute;gina de regalo de turnos</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar turno que se desea tomar</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton para confirmar el turno seleccionado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar ventana de confirmaci&oacute;n de turno seleccionado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar turno a seleccionar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar ventana confirmando turno tomado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Habilitar Desabilitar Usuarios" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="135" name="DesHab_Usuario">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[25]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se probar&aacute; que si al dehabilitar a un usuario, este queda realmente sin poder realizar acciones sobre el sistema.</p>]]></summary>
+	<preconditions><![CDATA[<p>El administrador (que es el unico que puede realizar estas acciones), debe estar yo dentro de la p&aacute;gina y haber iniciado sesion correctamente.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la opci&oacute;n de deshabilitaci&oacute;n de usuarios</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	que se habr&aacute; panel de deshabilitaci&oacute;n de usuarios</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Buscar a usuario por su nombre o por su ID</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Filtrar los usuarios la busqueda realizada</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	entrar a sus opciones y seleccionar la opci&oacute;n de deshabilitar usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar ventada de confirmaci&oacute;n de deshabilitaci&oacute;n de usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar confirmar en la ventana</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Usuario deshabilitado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Anotar contrase&ntilde;a y nombre de usuario que se deshabilito.</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	iniciar sesi&oacute;n con usuario y contrase&ntilde;a anotados</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar que usuario no puede tomar turnos y solo puede ver su informaci&oacute;n de usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="144" name="Hab_Usuario">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[26]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>a un usuario deshabilitado se le volver&aacute; a habilitar</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la opci&oacute;n de deshabilitar usuarios</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar panel deshabilitaci&oacute;n de usuarios</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	filtrar por usuario deshabilitados</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar cualquier usuario deshabilitado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar usuario.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Selecionar la opci&oacute;n de habilitar usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar ventana emergente de confirmaci&oacute;n de Habilitaci&oacute;n usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Confirmar habilitaci&oacute;n de usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Habilitar usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	anotar contrase&ntilde;a y nombre de usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	cerrar sesi&oacute;n de administrador y iniciar sesi&oacute;n con usuario y contrase&ntilde;a anotados anteriormente</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	inicio de sesion exitoso</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>
+	conprobar que usuario quedo habilitado exitosamente (puede tomar turnos)</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="121" name="Habilitar usuario por cumplimiento de falta">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[22]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>El usuario debe hablitarse despues de haber cumplido el tiempo de penalizacion por haber cometido una falta</p>]]></summary>
+	<preconditions><![CDATA[<p>el usuario debe estar deshabilitado por falta</p>]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+
+</testcase>
+
+<testcase internalid="154" name="DesHab_Local">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[22]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Se deshabilitara un local especifico.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador logeado y en pensa&ntilde;a de deshabilitaciones</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	ir a opci&oacute;n de deshabilitar local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar todos los locales existentes</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Buscar local especifico, a travez de la pesta&ntilde;a de busqueda y filtrar resultados (por pais, supermercado, direcci&oacute;n).</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Filtrar resultados por la busqueda.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar local que se desea dehabilitar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar opciones de local seleccionado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Escoger opcion de deshabilitar local.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a de confirmaci&oacute;n de dehabilitaci&oacute;n de local.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar dehabilitaci&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Deshabilitar local, mostrar pesata&ntilde;a de deshabilitaci&oacute;n exitosa y cancelar todos los turnos que se hayan tomado para ese local.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="162" name="Hab_Local">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[23]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Se habilitar&aacute; un local que este en estado de dehabilitado.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador logeado y en pensta&ntilde;a de deshabilitaci&oacute;n</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	ir a opcion de habilitar locales</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar todos los locales deshabilitados</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar local a habilitar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar opciones del local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	selecionar opcion de habilitar local.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a emergente de confirmaci&oacute;n de habilitar local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar habilitaci&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	habilitar local, mostrar que la habilitaci&oacute;n fue exitosa.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="168" name="DesHab_Supermercado">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[24]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Se deshabilitar&aacute; una cadena de supermercados completa</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador logueado y en pesta&ntilde;a de deshabilitaciones</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Seleccionar la oṕci&oacute;n de mostrar cadenas de supermercado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Filtrar los resultados y mostrar solo las cadenas de supermercados</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Seleccionar cadenas de supermercados a deshbilitar (indicar pais)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar opciones de cadena selecionada</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opci&oacute;n de deshabilitar cadena de supermercados</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a emergente de confirmaci&oacute;n de dehabilitaci&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	confirmaci&oacute;n de deshabilitaci&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	deshabilitar cadena de supermercado, junto con todos sus locales asociados (en el pais )</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="174" name="Hab_Supermercado">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[25]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Se habilitar&aacute; una cadenas de supermercado</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador logueado y en pesta&ntilde;a de deshabilitaci&oacute;n</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de cadena de supermercados deshabilitados (indicar pais)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	FIltrar resultados de la busqueda</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar cadena de supermercado de habilitar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar opciones de supermercado seleccionado</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de habilitar cadena de supermercado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a emergente de confirmaci&oacute;n de habilitaci&oacute;n de supermercado (indicando que se habilitaran todos los locales para tal cadena)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de confirmacion.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de habilitacion exitosa. habilitar todos los locales asociados esa cadana en ese pais</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Logín" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="180" name="Login_Admin">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[31]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se iniciar&aacute; sesion como administrados</p>]]></summary>
+	<preconditions><![CDATA[<p>Tener abierto su navegador web preferido, con la p&aacute;gina de empaques para estudiar en la secci&oacute;n de inicio de sesi&oacute;n, esperando ingresar datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar en los campos respectivos:</p>
+<p>
+	<strong>Usuario: </strong>Admin</p>
+<p>
+	<strong>Contrase&ntilde;a: </strong>Admin</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar boton de inisiar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Login Exitoso y mostrar p&aacute;gina inicial de administradores</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="184" name="Login_Usuario">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[32]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se inciar&aacute; sesion como empaquetador</p>]]></summary>
+	<preconditions><![CDATA[<p>Tener abierto su navegador web preferido, con la p&aacute;gina de empaques para estudiar en la secci&oacute;n de inicio de sesi&oacute;n, esperando ingresar datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar en los campos respectivos:</p>
+<p>
+	<strong>Usuario:&nbsp;</strong></p>
+<p>
+	<strong>Contrase&ntilde;a: </strong></p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar el bot&oacute;n inisiar sesi&oacute;n.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Login exitoso, y mostrar p&aacute;gina inicial de empaquetadores.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="188" name="Login_Incorrecto">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[33]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se verificar&aacute; que no se puede ingresar si no se tiene el usuario y contrase&ntilde;a correcto.</p>]]></summary>
+	<preconditions><![CDATA[<p>Se debe estar en su navegador web preferido, con la p&aacute;gina de empaques en la secci&oacute;n de login, esperando a que ingresen datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar los siguientes datos en los campos correspondientes:</p>
+<p>
+	(cualquier_dato) = ingresar lo que dese&eacute; por teclado (sin contar caracteres especiales <span class="short-url">descritos en el siguiente <a href="http://goo.gl/zaCCmm">enlace</a></span>)</p>
+<p>
+	<strong>Usuario: </strong>(cualquier_dato)</p>
+<p>
+	<strong>Contrase&ntilde;a:</strong> (cualquier_dato)</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar el bot&oacute;n de iniciar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No cambiar de p&aacute;gina y informarle al usuario que ingreso usuario o contrase&ntilde;a incorrectos, que lo intente nuevamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="192" name="Login_UsuarioCorrecto_PassIncorrecta">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[34]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se ingresar&aacute; la informaci&oacute;n de un usuario que si existe en el sistema, pero le ingresar&aacute; una clave Incorrecta.</p>]]></summary>
+	<preconditions><![CDATA[<p>Se debe estar en su navegador web preferido, con la p&aacute;gina de empaques en la secci&oacute;n de login, esperando a que ingresen datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar los siguientes datos en los campos correspondientes:</p>
+<p>
+	(cualquier_dato) = ingresar lo que dese&eacute; por teclado (sin contar caracteres especiales <span class="short-url">descritos en el siguiente <a href="http://goo.gl/zaCCmm">enlace</a></span>)</p>
+<p>
+	<strong>Usuario: </strong></p>
+<p>
+	<strong>Contrase&ntilde;a:</strong> (cualquier_dato)</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar bot&oacute;n de iniciar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No cambiar de p&aacute;gina y informarle al usuario que ingreso usuario o contrase&ntilde;a incorrectos, que lo intente nuevamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="196" name="Login_UsuarioIncorrecto_PassCorrecta">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[35]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se iniciar&aacute; sesion con un contrase&ntilde;a valida en el sistema, pero que no le corresponde al usuario ingresado</p>]]></summary>
+	<preconditions><![CDATA[<p>Se debe estar en su navegador web preferido, con la p&aacute;gina de empaques en la secci&oacute;n de login, esperando a que ingresen datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar los siguientes datos en los campos correspondientes:</p>
+<p>
+	(cualquier_dato) = ingresar lo que dese&eacute; por teclado (sin contar caracteres especiales <span class="short-url">descritos en el siguiente <a href="http://goo.gl/zaCCmm">enlace</a></span>)</p>
+<p>
+	<strong>Usuario: </strong>(cualquier_dato)</p>
+<p>
+	<strong>Contrase&ntilde;a:</strong></p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar Bot&oacute;n iniciar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No cambiar de p&aacute;gina y informarle al usuario que ingreso usuario o contrase&ntilde;a incorrectos, que lo intente nuevamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="200" name="Login_UsuarioCorrecto_Sin Contraseña">
+	<node_order><![CDATA[5]]></node_order>
+	<externalid><![CDATA[36]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Se ingresar&aacute;n los datos de un usuario registrado, pero no se ingresar&aacute; la contrase&ntilde;a.</p>]]></summary>
+	<preconditions><![CDATA[<p>Se debe estar en su navegador web preferido, con la p&aacute;gina de empaques en la secci&oacute;n de login, esperando a que ingresen datos.</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar los siguientes datos en los campos correspondientes:</p>
+<p>
+	<strong>Usuario: faltausuario</strong></p>
+<p>
+	<strong>Contrase&ntilde;a:</strong></p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar bot&oacute;n de iniciar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No cambiar de p&aacute;gina y informarle al usuario que ingreso usuario o contrase&ntilde;a incorrectos, que lo intente nuevamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="204" name="Login_SinUsuario_PassCorrecta">
+	<node_order><![CDATA[6]]></node_order>
+	<externalid><![CDATA[37]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>se ingresar&aacute; una contrase&ntilde;a registrada en el sistema, pero se dejar&aacute; en blanco el campo de usuario</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar los siguientes datos en los campos correspondientes:</p>
+<p>
+	<strong>Usuario: </strong></p>
+<p>
+	<strong>Contrase&ntilde;a: <strong>faltausuario</strong></strong></p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar bot&oacute;n de iniciar sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No cambiar de p&aacute;gina y informarle al usuario que ingreso usuario o contrase&ntilde;a incorrectos, que lo intente nuevamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Nuevo Local" >
+<node_order><![CDATA[4]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="60" name="Crea_Nuevo_Local">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[13]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	se agrear&aacute; un nuevo local</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador debe estar en la p&aacute;gina y con su sesi&oacute;n iniciada correctamente</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la secci&oacute;n de Registrar nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Ir a la p&aacute;gina de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	ir a p&aacute;gina para formulacio de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	llenar todas las casillas solicitadas, Pais, Nombre, Direcci&oacute;n, cajas disponibles</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Pantalla de creaci&oacute;n de local exitoso</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="208" name="20161031-03:47:31 Crea_Nuevo_Local">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[38]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	se agrear&aacute; un nuevo local</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador debe estar en la p&aacute;gina y con su sesi&oacute;n iniciada correctamente</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la secci&oacute;n de Registrar nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Ir a la p&aacute;gina de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	ir a p&aacute;gina para formulacio de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	llenar todas las casillas solicitadas, Pais, Nombre, Direcci&oacute;n, cajas disponibles</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Pantalla de creaci&oacute;n de local exitoso</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="66" name="Crea_Local_Existente">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[14]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	se ingresaran los datos de un local que ya existe.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador debe estar en pag&aacute;ina principal de administradores.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	ir a la secci&oacute;n de REgistrar nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Ir a la pagina de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	ir a la p&aacute;gina de formulario de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Llenar todas las casillas solicitadas (Pais, nombre, Direcci&oacute;n, cajas disponibles, etc..) DE UN LOCAL YA EXISTENTE</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana emergente para confirmaci&oacute;n de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton confirmar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana que diga que local ya existe y que los datos no son validos.</p>
+<p>
+	Cambiar de ventana y pedir que ingrese los datos nuevamente.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="214" name="20161031-03:47:31 Crea_Local_Existente">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[39]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	se ingresaran los datos de un local que ya existe.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador debe estar en pag&aacute;ina principal de administradores.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	ir a la secci&oacute;n de REgistrar nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Ir a la pagina de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	ir a la p&aacute;gina de formulario de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Llenar todas las casillas solicitadas (Pais, nombre, Direcci&oacute;n, cajas disponibles, etc..) DE UN LOCAL YA EXISTENTE</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de crear nuevo local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana emergente para confirmaci&oacute;n de nuevo local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton confirmar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana que diga que local ya existe y que los datos no son validos.</p>
+<p>
+	Cambiar de ventana y pedir que ingrese los datos nuevamente.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="221" name="Crea_Nuevo_Cliente_Padre">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[21]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Crear nueva marca de supermercados</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador ya logeado y en secci&oacute;n de crear nuevo local</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la secci&oacute;n de crear nueva marca de supermercado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Redireccionar a p&aacute;gina de formulario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	llenar todos los datos que pida el formulario.</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton al final del formulario para confirmar creacion de nuevo supermercado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana de confirmaci&oacute;n de datos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar presionando boton de confirmaci&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a que indique que supermercado se creo correctamente</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Regalo Turnos" >
+<node_order><![CDATA[5]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="227" name="Regalo_Turno">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[17]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	usuario publica un turno al que no puede asistir, para que otro usuario lo tome</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Estar logueado en la p&aacute;gina y estar en la secci&oacute;n de regalo de turnos</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Seleccionar 1 o 2 turnos, que se desea regalar</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	precionar boton confirmar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar ventana de confirmaci&oacute;n de publicaci&oacute;n de turnos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="231" name="Toma_de_turno_de_regalo">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[19]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Usuario tomar&aacute; un turno que se public&oacute;</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Estar logeado y en la p&aacute;gina principal de publicacion de regalo de turnos</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Selecionar turno de regalo a tomar</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de confirmar turno de regalo seleccionado</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana enmergente de confirmaci&oacute;n de turno</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar turno</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventan de turno tomado con exito</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Solicitud Y Asignación de turnos" >
+<node_order><![CDATA[6]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="98" name="Solicitud de turno">
+	<node_order><![CDATA[100]]></node_order>
+	<externalid><![CDATA[17]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Usuarios podr&aacute;n tomar turnos en el proceso de solicitud de turno normal</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe estar logeado y no debe tener ninguna penalizacion, ademas debe tener turnos disponibles</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Ir a la ventana de buscador de turnos</p>]]></actions>
+	<expectedresults><![CDATA[<p>Muestra los locales filtrados por marcas para la ciudad del usuario</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El usuario selecciona un local de su interes</p>]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra los horarios disponibles para el local seleccionado</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>El usuario selecciona un horario a su gusto y ocupa uno de sus cupos para la semana</p>]]></actions>
+	<expectedresults><![CDATA[<p>El sistema registra y almacena la peticion del turno </p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="100" name="Solicutud de turnos en repechaje">
+	<node_order><![CDATA[101]]></node_order>
+	<externalid><![CDATA[18]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Usuarios podr&aacute;n tomar turnos en el proceso de solicitud de turno repechaje</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe estar loegeado en el sistema y no tener ninguna penalizacion, debe tener turnos disponibles</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El usuario debe dirigirse a la pesta&ntilde;a de buscador de turnos</p>]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra los locales filtrados por marcas para la ciudad del usuario</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El usuario seleccion un local de su interes</p>]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra los horarios disponibles que aun quedan para el local</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>El usuario selecciona un horario</p>]]></actions>
+	<expectedresults><![CDATA[<p>La peticion es almacenada</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="108" name="Asignacion de turnos a usuarios normales">
+	<node_order><![CDATA[102]]></node_order>
+	<externalid><![CDATA[19]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Los turnos de los usuarios son procesados y son asignados acorde a las prioridades</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe tener un turno solicitado</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El sistema consulta los turnos para la semana</p>]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El sistema organiza de manera prioritaria los turnos y los asigna</p>]]></actions>
+	<expectedresults><![CDATA[<p>Actualiza las tablas de turnos de los usuarios</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="112" name="Asignacion de turnos a usuarios administradores de locales">
+	<node_order><![CDATA[103]]></node_order>
+	<externalid><![CDATA[20]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>El sistema asigna el turno un administrador de local con maxima prioridad en la asignacion de turnos</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe tener asignado un local a supervisar y debe haber pedido un turno</p>]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El sistema consulta para la semana los turnos pedidos por los usuarios adminsitradores de locales</p>]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El sistema asgina los turnos a todos estos usuarios si la solicitud es al local que supervizan </p>]]></actions>
+	<expectedresults><![CDATA[<p>El sistema asigna los turnos si el local solicitado es supervizado por el</p>]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Inscripción" >
+<node_order><![CDATA[7]]></node_order>
+<details><![CDATA[<p>
+	Se realizar&aacute;n pruebas de inscripciones a la pag&iacute;na EPE</p>
+]]> 
+</details>
+<testcase internalid="241" name="Inscribir_usuario_nuevo">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[44]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Un usuario se registrar&aacute; en la p&aacute;gina</p>]]></summary>
+	<preconditions><![CDATA[<p>Estar en la p&aacute;gina de EPE</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	ir a la opci&oacute;n de incio de sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pantalla de inicio de sesi&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar la opci&oacute;n de registrarse</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pantalla de formulario para nuevo usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar todos los datos que el formulario nos pida</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar boton al final del formulario para confirmar los datos</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a de verificaci&oacute;n de que los datos sean correctos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar datos.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pestalla de registro exitoso y volver a inicio de la p&aacute;gina.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	ir a la opci&oacute;n de inicio de sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pantalla de inicio de sesi&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar usuario y contrase&ntilde;a elegidos para el registro. presionar boton de inicio de sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar login exitoso y pagina principal de empaquetadores.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="250" name="Inscribir_usuario_YaRegistrado">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[45]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>incribir usuario ya registrado.</p>]]></summary>
+	<preconditions><![CDATA[<p>Estar en la p&aacute;gina principalde EPE</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Ir a la opci&oacute;n de inicio de sesi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pantalla de inicio de sesi&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar la opci&oacute;n de registrarse</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostral pantalla de formulario para nuevo usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Ingresar datos que de un usuario que ya exista (lo mas importante es que el nombre de usuario, mail sean unos que ya existan, lo demas puede variar)</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton al final del formulario para confirmar los datos</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pantalla de verificaci&oacute;n de que los datos sean los correctos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Confirmar datos</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;an de usuario a registrado. Pedir volver a ingresar los datos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="257" name="Modificar_perfil">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[26]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	modificar perfil de algun usuario</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	usuario logeado y en seccion de perfil</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de modificar perfil</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar ventana de modificacion de perfil</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	modificar campos que se desea modificar</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	presionar boton de guardar cambios</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a emergente de confirmaci&oacute;n de cambios</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar cambios.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de cambios han sido existoso</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="263" name="Enviar_Archivos_para_trabajar">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[27]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Usuario Enviar&aacute; archivos para que admintrador los revise, para su aceptaci&oacute;n o rechazo.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Ser Usuario nuevo, y en opcion de enviar archivos para trabajar con nosotros</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	leer los terminos y condiciones de trabajar para EPE y presionar continuar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a para adjuntar archivos.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	adjuntar todos los archivos en el formato pedido.</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Seleccionar la opcion enviar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar pesta&ntilde;a de confirmaci&oacute;n de archivos.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Presionar confirmar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de archivos enviados</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Web" >
+<node_order><![CDATA[8]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="93" name="Paguina web">
+	<node_order><![CDATA[100]]></node_order>
+	<externalid><![CDATA[15]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>el sistema debe ser una pagina web</p>]]></summary>
+	<preconditions><![CDATA[<p>El servidor debe estar arriba correindo el apache y el MySql </p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Ingresar a un URL donde debe estar expuesto el servicio de la aplicacion web</p>]]></actions>
+	<expectedresults><![CDATA[<p>Visualizacion de la pagina web</p>]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Otros" >
+<node_order><![CDATA[8]]></node_order>
+<details><![CDATA[]]> 
+</details><testsuite name="Otros" >
+<node_order><![CDATA[8]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="283" name="Aceptar_solicitud_de_trabajo">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[28]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	administrador aceptar&aacute; una solicitud de trabajo</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador logeado y en seccion de revisar solicitudes de trabajo</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de solicitudes pendientes</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar todas las solicitudes de trabajo (de su pa&iacute;s)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar solicitud que desea solicitar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar nueva ventana con opci&oacute;n de descargar archivos que usuario subio</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar descargar archivos</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	comenzar descarga de archivos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	selecionar opcion de aceptar solicitud</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de confirmaci&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	presionar confirmar solicitud</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de aceptaci&oacute;n, enviar mail a usuario que envio solicitud, informandole que su solicitud de trabajo fue aceptada</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="290" name="Rechazar_solicitud_de_trabajo">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[29]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	administrador rechazar&aacute; solicitud de trabajo</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Administrador debe estar logeado y en seccion de revisar solicitudes de trabajo</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Seleccionar opcion de solicitudes pendientes</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mostrar solicitudes de trabajo (de su pais)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Selecionar solicitud que desea revisar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar nueva ventana con opci&oacute;n de descargar los archivos que usuario subio</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar descargar archivo</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	comenzar descarga de archivos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opci&oacute;n de rechazar solicitud</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de confirmaci&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	precionar confirmar decisi&oacute;n</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar pesta&ntilde;a de rechazo de solicitud, enviar mail a usuario de la solicitud, informando que su aolicitud fue rechazada</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite>
+<testcase internalid="298" name="Suscripción_a_local_preferido">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[30]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	usuario de suscribir&aacute; a local preferido.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Empaquetador debe esta logeado y en opci&oacute;n de locales</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	en la pesta&ntilde;an de busqueda usuario debe selecionar su criterio de busqueda</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	filtrar los locales por busqueda de usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar local a cual desea suscribirse</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar opciones de local</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de suscribirse al local</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	confirmar suscripci&oacute;n.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="319" name="Habilitar_Beneficio_Cola_De_Prioridad">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[32]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	administrador dar&aacute; a usuario benefico para la proxima toma de turnos</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	administrador debe estar logeado y en pesta&ntilde;a de empaquetadores</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	a traves de la pesta&ntilde;a de busqueda filtrar a usuario que desea buscar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	filtrar los resultados por la busqueda</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar usuario que desea dar beneficio</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	abrir opciones de usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opcion de dar beneficio para la proxima de turno y seleccionar por cuanto tiempo estar&aacute; el beneficio</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	abrir pesta&ntilde;a de confirmaci&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar confirmar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	dar a usuario beneficio en la cola para la toma de turnos</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="313" name="DesHab_beneficio_cola_de_prioridad">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[33]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	quitar beneficio de cola de prioridad a usuario</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	administrador logeado al sistema y en pesta&ntilde;a de empaquetadores</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	en la pesta&ntilde;a de busqueda buscar a usuario</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	filtar resultados por busqueda de administrador</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar usuario a quitar beneficio</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	mostrar opciones de ese usuario</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	seleccionar opci&oacute;n de quitar beneficio</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	abrir pesta&ntilde;a de confirmaci&oacute;n</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	confirmar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	quitar a usuario beneficio</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Modificacion de usuario" >
+<node_order><![CDATA[10]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="271" name="Modificacion de perfil">
+	<node_order><![CDATA[100]]></node_order>
+	<externalid><![CDATA[48]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Usuario puede modificar la informaci&oacute;n de su perfil</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe estar registrado en el sistema</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El usuario ingresa a la ventana de perfil</p>]]></actions>
+	<expectedresults><![CDATA[<p>Sistema muestra la informacion del usuario en forma de formulario</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Usuario edita la informacion que desea </p>]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>El usuario decide guardar la informacion</p>]]></actions>
+	<expectedresults><![CDATA[<p>La informacion es verificada y actualizada, si la verificacion falla debe usar la informacion anterior mente digitada </p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="273" name="Modificacion de permisos y administracion de locales">
+	<node_order><![CDATA[101]]></node_order>
+	<externalid><![CDATA[49]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>El administrador puede asignar un local a supervizar o convertirlo en administrador tambien</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe existir en el sistema</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El administrador ingresa a la pesta&ntilde;a de usuarios</p>]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra los usuarios </p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El administrador busca y selecciona el usuario a modificar</p>]]></actions>
+	<expectedresults><![CDATA[<p>El sistema muestra toda la informacion del usuario incluyendo sus configuraciones en forma de formulario</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>El administrador modifica la informacion </p>]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>El administrador presiona el boton de guardar</p>]]></actions>
+	<expectedresults><![CDATA[<p>La informacion es validada y almacenada en la base de datos</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Asistencia" >
+<node_order><![CDATA[11]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="303" name="Registrar asistencia">
+	<node_order><![CDATA[100]]></node_order>
+	<externalid><![CDATA[53]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Registrar asistencia a los turnos</p>]]></summary>
+	<preconditions><![CDATA[<p>El usuario debe tener asignado un turno</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El usuario supervisor del local ingresa a las opciones del turno</p>]]></actions>
+	<expectedresults><![CDATA[<p>Muestra los usuarios en el turno en el que se encuentra</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>El supervisor ingresa una falta a un usuario </p>]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>El supervisor guarda la informacion</p>]]></actions>
+	<expectedresults><![CDATA[<p>El sistema ingresa las faltas y deshabilita los usuarios con faltas</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="305" name="Consulta de asistencia">
+	<node_order><![CDATA[101]]></node_order>
+	<externalid><![CDATA[54]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Los administradores pueden ver la asistencia de los trabajadores.</p>]]></summary>
+	<preconditions><![CDATA[<p>Deben haberse realizado un turno, el administrador debe estar logeado</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>El administrador ingresa a la ventana de visualizacion de asistencia</p>]]></actions>
+	<expectedresults><![CDATA[<p>El sistema muestra la asistencia de los usuarios con filtros por locales, marcas, fechas y horas </p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>
