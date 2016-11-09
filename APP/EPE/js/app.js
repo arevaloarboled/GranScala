@@ -24,6 +24,11 @@ function getCookie(c_name)
  }
 }
 
+function delete_cookie( name ) {
+  var c_value=escape("null") + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie=name + "=" + c_value;
+}
+
 
 //console.log(getCookie("id"));
 
@@ -60,6 +65,27 @@ function getCookie(c_name)
         .when('/administrar', {
           templateUrl: 'views/administrar.html',
           controller: 'administrar'
+        })
+        .when('/faltas', {
+          templateUrl: 'views/faltas.html'
+        })
+        .when('/perfil', {
+          templateUrl: 'views/perfil.html'
+        })
+        .when('/turnos', {
+          templateUrl: 'views/turnos.html',
+          controller: 'turnos'
+        })
+        .when('/signin', {
+          templateUrl: 'views/signin.html',
+          controller: 'signin'
+        })
+        .when('/verify', {
+          templateUrl: 'views/verify.html',
+          controller: 'verify'
+        })
+        .when('/horarios_local', {
+          templateUrl: 'views/horarios_local.html'
         })
         .otherwise({
           redirectTo: '/'

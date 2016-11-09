@@ -4,7 +4,7 @@ class DB {
 	private static $db_host = "localhost";
 	private static $db_user = "root";
 	private static $db_pass = "";
-	private static $db_name = "epe";
+	private static $db_name = "epe_c";
 	protected $conn;
 	protected $log;
 

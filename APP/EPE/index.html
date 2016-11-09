@@ -18,9 +18,9 @@
 </head>
 <body layout="row" ng-controller="MenuCtrl">
 
-  <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="getMinRes()" ng-if="id!=undefined">
+  <md-sidenav md-colors="{background: 'indigo-800'}"  layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="getMinRes()" ng-if="id!=undefined">
           
-    <md-toolbar>
+    <md-toolbar md-colors="{background: 'grey-900'}" >
       <div class="md-toolbar-tools">
   
         <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openLeftMenu()" ng-show="!getMinRes()">
@@ -32,20 +32,36 @@
     </md-toolbar>
 
     <md-list>
-      <md-list-item ng-click="openLeftMenu()" href="#/principal">
-        <i class="material-icons">home</i>
-        <span class="md-body-1"><h4>Principal</h4></span>
+      <md-list-item ng-click="openLeftMenu()" href="#/principal" layout="row">
+        <i class="material-icons" flex="25">home</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Principal</h4></span>
       </md-list-item>
       <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/administrar">
-        <i class="material-icons">settings</i>
-        <span class="md-body-1"><h4>Administrar</h4></span>
+        <i class="material-icons" flex="25">settings</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Administrar</h4></span>
+      </md-list-item>
+      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/turnos">
+        <i class="material-icons" flex="25">schedule</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Turnos</h4></span>
+      </md-list-item>
+      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/faltas">
+        <i class="material-icons" flex="25">error_outline</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Faltas</h4></span>
+      </md-list-item>
+      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/perfil">
+        <i class="material-icons" flex="25">perm_identity</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Perfil</h4></span>
+      </md-list-item>
+      <md-list-item ng-click="logout()">
+        <i class="material-icons" flex="25">power_settings_new</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Desconexión</h4></span>
       </md-list-item>
     </md-list>
   </md-sidenav>
 
 
   <div layout="column" class="relative" layout-fill role="main">      
-    <md-toolbar>
+    <md-toolbar md-colors="{background: 'grey-900'}" >
       <div class="md-toolbar-tools">
         
         <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openLeftMenu()" ng-show="!getMinRes()">
@@ -63,7 +79,7 @@
       </div>
     </md-toolbar>
 
-    <md-content flex md-scroll-y style="background: #eee">
+    <md-content flex md-scroll-y style="background: #ddd">
       <ui-view layout="column" layout-fill layout-padding>
         <div ng-view></div>
       </ui-view>

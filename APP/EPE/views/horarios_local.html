@@ -1,0 +1,86 @@
+<div ng-cloak>
+  <md-content class="md-whiteframe-12dp">
+    <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
+      <md-tab label="Horarios">
+        <md-content class="md-padding">
+            
+        <p>*Los horarios se presentan en el estandar de tiempo: Hora militar (00:00 - 23:59).</p>
+        
+        <md-button href="#/horarios_local" md-no-ink="md-no-ink" class="md-primary">
+          Aplicar a Turnos
+          <md-icon class="material-icons">store</md-icon>
+        </md-button>
+        
+        <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'indigo-800'}" id="Administrar_tab">
+          <md-tab label="Lunes">
+            
+            <md-content class="md-padding">
+              <md-card layout="row"  class="md-whiteframe-8dp">
+               <div layout-padding layout-margin layout-fill layout="row" flex="30">
+                  <h4>9:00 - 11:00</h4>
+                </div>
+                <div layout-padding layout-margin layout-fill layout="row" flex layout-align="end center">
+                    <md-checkbox aria-label="cb1" ng-model="data.cb1" class="md-primary"></md-checkbox>
+                </div>
+              </md-card>
+              <md-card layout="row"  class="md-whiteframe-8dp">
+               <div layout-padding layout-margin layout-fill layout="row" flex="30">
+                  <h4>11:00 - 14:00</h4>
+                </div>
+                <div layout-padding layout-margin layout-fill layout="row" flex layout-align="end center">
+                    <md-checkbox aria-label="cb2" ng-model="data.cb2" class="md-primary"></md-checkbox>
+                </div>
+              </md-card>
+            
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Martes">
+            <md-content class="md-padding">
+              
+            Martes
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Miercoles">
+            <md-content class="md-padding">
+              
+            Miercoles
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Jueves">
+            <md-content class="md-padding">
+              
+            Jueves
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Viernes">
+            <md-content class="md-padding">
+              
+            Viernes
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Sabado">
+            <md-content class="md-padding">
+              
+            Sabado
+                  
+            </md-content>
+          </md-tab>
+          <md-tab label="Domingo">
+            <md-content class="md-padding">
+              
+            Domingo
+                  
+            </md-content>
+          </md-tab>
+        </md-tabs>
+              
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>

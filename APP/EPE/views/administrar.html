@@ -1,38 +1,40 @@
 <div ng-cloak>
-  <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
+  <md-content class="md-whiteframe-12dp">
+    <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
       <md-tab label="Paises">
-            <md-content class="md-padding">
-            <md-button class="md-raised md-primary md-fab" ng-click="new_pais()">
-              <md-icon>add</md-icon>
-            </md-button>
-            <div ng-repeat="pais in paises">
-            <md-card>
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-headline">{{pais.nombre}}</span>
-                </md-card-title-text>
-              </md-card-title>
-              <md-fab-toolbar md-direction="left">
-                <md-fab-trigger class="align-with-text">
-                  <md-button aria-label="menu" class="md-fab md-primary">
-                    <md-icon class="material-icons">menu</md-icon>
-                  </md-button>
-                </md-fab-trigger>
-      
-                <md-toolbar>
-                  <md-fab-actions class="md-toolbar-tools">
-                    <md-button aria-label="delete" class="md-icon-button" ng-click="delete_pais(pais)">
-                      <md-icon class="material-icons">delete</md-icon>
+        <md-content class="md-padding">
+          <md-button class="md-raised md-primary md-fab" ng-click="new_pais()">
+            <md-icon>add</md-icon>
+          </md-button>
+          <div ng-repeat="pais in paises">
+            <md-card layout="row"  class="md-whiteframe-8dp">
+             <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{pais.nombre}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-fab-speed-dial md-direction="left" class="md-scale">
+                  <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-primary">
+                      <md-icon class="material-icons">menu</md-icon>
                     </md-button>
-                    <md-button aria-label="done" class="md-icon-button"ng-click="edit_pais(pais)">
-                      <md-icon class="material-icons">mode_edit</md-icon>
-                    </md-button>
-                  </md-fab-actions>
-                </md-toolbar>
-              </md-fab-toolbar>
+                  </md-fab-trigger>
+        
+                    <md-fab-actions>
+                      <md-button aria-label="delete" class="md-icon-button" ng-click="delete_pais(pais)">
+                        <md-icon class="material-icons">delete</md-icon>
+                      </md-button>
+                      <md-button aria-label="done" class="md-icon-button"ng-click="edit_pais(pais)">
+                        <md-icon class="material-icons">mode_edit</md-icon>
+                      </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+              </div>
             </md-card>
-        </div>
+          </div>
         </md-content>
       </md-tab>
       <md-tab label="Ciudades">
@@ -40,46 +42,253 @@
           <md-input-container>
             <label>Pais</label>
             <md-select ng-model="pais">
+              <md-option value="null" ng-selected="true">Any</md-option>
               <md-option ng-repeat="pais in paises" value="{{pais.idpais}}">{{pais.nombre}}</md-option>
             </md-select>
           </md-input-container>
           
-          <md-button class="md-raised md-primary md-fab" ng-click="new_ciudad()">
+          <md-button class="md-raised md-primary md-fab" ng-click="tmp_ciudad.edit=true">
               <md-icon>add</md-icon>
             </md-button>
+            <md-card ng-show="tmp_ciudad.edit" layout="row" class="md-whiteframe-8dp">
+              <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <md-input-container>
+                      <label>Ciudad</label>
+                      <input type="text" ng-model="tmp_ciudad.nombre" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Pais</label>
+                      <md-select ng-model="tmp_ciudad.pais_idpais" required>
+                        <md-option ng-repeat="paiss in paises" value="{{paiss.idpais}}">{{paiss.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                  </md-card-title-text>
+                </md-card-title>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-button class="md-raised md-primary" type="button" ng-click="new_ciudad()">Guardar</md-button>
+                <md-button ng-click="tmp_ciudad.edit=!tmp_ciudad.edit" md-no-ink="md-no-ink">Cancelar</md-button>
+              </div>
+            </md-card>
             <div ng-repeat="ciudad in ciudades">
-            <md-card ng-show="pais==ciudad.pais_idpais">
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-headline">{{ciudad.nombre}}</span>
-                </md-card-title-text>
-              </md-card-title>
-              <md-fab-toolbar md-direction="left">
-                <md-fab-trigger class="align-with-text">
-                  <md-button aria-label="menu" class="md-fab md-primary">
-                    <md-icon class="material-icons">menu</md-icon>
-                  </md-button>
-                </md-fab-trigger>
-                  
-                <md-toolbar>
-                  <md-fab-actions class="md-toolbar-tools">
-                    <md-button aria-label="delete" class="md-icon-button" ng-click="delete_ciudad(ciudad)">
-                      <md-icon class="material-icons">delete</md-icon>
+            <md-card ng-show="pais==ciudad.pais_idpais || pais=='null' || ciudad.edit" layout="row" class="md-whiteframe-8dp">
+              <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span ng-show="!ciudad.edit" class="md-headline">{{ciudad.nombre}}</span>
+                    <span ng-show="!ciudad.edit" class="md-subhead">{{buscar(paises,'idpais',ciudad.pais_idpais).nombre}}</span>
+                    <md-input-container ng-show="ciudad.edit">
+                      <label>Ciudad</label>
+                      <input type="text" ng-model="ciudad.nombre" required/>
+                    </md-input-container>
+                    <md-input-container ng-show="ciudad.edit">
+                      <label>Pais</label>
+                      <md-select ng-model="ciudad.pais_idpais">
+                        <md-option ng-repeat="paiss in paises" value="{{paiss.idpais}}" ng-selected="{{ ciudad.pais_idpais === paiss.idpais ? 'true' : 'false' }}">{{paiss.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                  </md-card-title-text>
+                </md-card-title>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-fab-speed-dial md-direction="left" class="md-scale">
+                  <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-primary">
+                      <md-icon class="material-icons">menu</md-icon>
                     </md-button>
-                    <md-button aria-label="done" class="md-icon-button" ng-click="editar_ciudad(ciudad)">
-                      <md-icon class="material-icons">mode_edit</md-icon>
-                    </md-button>
-                  </md-fab-actions>
-                </md-toolbar>
-              </md-fab-toolbar>
+                  </md-fab-trigger>
+                    
+                    <md-fab-actions>
+                      <md-button aria-label="delete" class="md-icon-button" ng-click="delete_ciudad(ciudad)">
+                        <md-icon class="material-icons">delete</md-icon>
+                      </md-button>
+                      <md-button aria-label="done" class="md-icon-button" ng-click="ciudad.edit=!ciudad.edit">
+                        <md-icon class="material-icons">mode_edit</md-icon>
+                      </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+                <md-button ng-show="ciudad.edit"  class="md-raised md-primary" type="button" ng-click="edit_ciudad(ciudad)">Guardar</md-button>
+                <md-button ng-show="ciudad.edit" ng-click="ciudad.edit=!ciudad.edit" md-no-ink="md-no-ink">Cancelar</md-button>
+              </div>
             </md-card>
             </div>
         </md-content>
       </md-tab>
-      <md-tab label="three">
+      <md-tab label="Marcas">
         <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+            <md-button class="md-raised md-primary md-fab" ng-click="new_marca()">
+              <md-icon>add</md-icon>
+            </md-button>
+            <div ng-repeat="marca in marcas">
+            <md-card layout="row" class="md-whiteframe-8dp">
+             <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{marca.nombre}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-fab-speed-dial md-direction="left" class="md-scale">
+                  <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-primary">
+                      <md-icon class="material-icons">menu</md-icon>
+                    </md-button>
+                  </md-fab-trigger>
+        
+                    <md-fab-actions>
+                      <md-button aria-label="delete" class="md-icon-button" ng-click="delete_marca(marca)">
+                        <md-icon class="material-icons">delete</md-icon>
+                      </md-button>
+                      <md-button aria-label="done" class="md-icon-button"ng-click="edit_marca(marca)">
+                        <md-icon class="material-icons">mode_edit</md-icon>
+                      </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+              </div>
+            </md-card>
+            </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Locales">
+        <md-content class="md-padding">
+            <div>
+            <md-input-container>
+              <label>Pais</label>
+              <md-select ng-model="Pais">
+                <md-option value="null" ng-selected="true">Any</md-option>
+                <md-option ng-repeat="pais in paises" value="{{pais.idpais}}">{{pais.nombre}}</md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container>
+              <label>Ciudad</label>
+              <md-select ng-model="Ciudad">
+                <md-option value="null" ng-selected="true">Any</md-option>
+                <md-option ng-show="ciudad.pais_idpais == Pais || Pais=='null' " ng-repeat="ciudad in ciudades" value="{{ciudad.idCiudad}}">{{ciudad.nombre}}</md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container>
+            <label>Marca</label>
+              <md-select ng-model="Marca">
+                <md-option value="null" ng-selected="true">Any</md-option>
+                <md-option ng-repeat="marca in marcas" value="{{marca.idsupermercado}}">{{marca.nombre}}</md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container>
+              <label>Nombre</label>
+              <input type="text" value="" ng-model="nombre"/>
+            </md-input-container>
+            </div>
+            <md-button class="md-raised md-primary md-fab" ng-click="tmp_local.edit=true">
+              <md-icon>add</md-icon>
+            </md-button>
+            <md-card ng-show="tmp_local.edit" layout="row" class="md-whiteframe-8dp">
+              <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <md-input-container>
+                      <label>Nombre</label>
+                      <input type="text" ng-model="tmp_local.nombre" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Pais</label>
+                      <md-select ng-model="paiss">
+                        <md-option value="null" ng-selected="true">Any</md-option>
+                        <md-option ng-repeat="pais in paises" value="{{pais.idpais}}">{{pais.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Ciudad</label>
+                      <md-select ng-model="tmp_local.Ciudad_idCiudad" required>
+                        <md-option ng-show="ciudad.pais_idpais == paiss || paiss=='null' " ng-repeat="ciudad in ciudades" value="{{ciudad.idCiudad}}">{{ciudad.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Direccion</label>
+                      <input type="text" ng-model="tmp_local.direccion" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Marca</label>
+                      <md-select ng-model="tmp_local.marca" required>
+                        <md-option ng-repeat="marca in marcas" value="{{marca.idsupermercado}}">{{marca.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    <md-switch ng-model="tmp_local.habilitado" class="md-primary" md-no-ink>
+                      <div ng-show="tmp_local.habilitado">Habilitado</div>
+                      <div ng-show="!tmp_local.habilitado">Inhabilitado</div>
+                    </md-switch>
+                  </md-card-title-text>
+                </md-card-title>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-button class="md-raised md-primary" type="button" ng-click="new_local()">Guardar</md-button>
+                <md-button ng-click="tmp_local.edit=!tmp_local.edit" md-no-ink="md-no-ink">Cancelar</md-button>
+              </div>
+            </md-card>
+            <div ng-repeat="local in locales">
+              <md-card ng-show="local.edit || ((local.nombre.indexOf(nombre)!=-1 || nombre=='' || nombre==undefined) && ((local.ciudad==Ciudad || Ciudad=='null') &&  (local.supermercado_idsupermercado == Marca || Marca=='null')))" layout="row" class="md-whiteframe-8dp">
+                <div layout="row" flex="30">
+                  <md-card-title>
+                    <md-card-title-text ng-show="!local.edit">
+                      <span class="md-headline">{{local.nombre}}</span>
+                      <span class="md-subhead">{{buscar(marcas,'idsupermercado',local.supermercado_idsupermercado).nombre}}</span>
+                      <span class="md-subhead">{{buscar(ciudades,'idCiudad',local.Ciudad_idCiudad).nombre}}</span>
+                      <span class="md-subhead">{{local.direccion}}</span>
+                      <span ng-show="local.habilitado" class="md-subhead">Habilitado</span>
+                      <span ng-show="!local.habilitado" class="md-subhead">Inhabilitado</span>
+                    </md-card-title-text>
+                    <md-card-title-text ng-show="local.edit">
+                      <md-input-container>
+                        <label>Nombre</label>
+                        <input type="text" ng-model="local.nombre" required/>
+                      </md-input-container>
+                      <md-input-container>
+                        <label>Ciudad</label>
+                        <md-select ng-model="local.ciudad">
+                          <md-option ng-repeat="ciudad in ciudades" ng-selected="ciudad.idCiudad == local.Ciudad_idCiudad" value="{{ciudad.idCiudad}}">{{ciudad.nombre}}</md-option>
+                        </md-select>
+                      </md-input-container>
+                      <md-input-container>
+                        <label>Direccion</label>
+                        <input type="text" ng-model="local.direccion" required/>
+                      </md-input-container>
+                      <md-input-container>
+                        <label>Marca</label>
+                        <md-select ng-model="local.marca">
+                          <md-option ng-repeat="marca in marcas" ng-selected="marca.idsupermercado==local.supermercado_idsupermercado" value="{{marca.idsupermercado}}">{{marca.nombre}}</md-option>
+                        </md-select>
+                      </md-input-container>
+                      <md-switch class="md-primary" md-no-ink ng-model="local.habilitado">
+                        <div ng-show="local.habilitado">Habilitado</div>
+                        <div ng-show="!local.habilitado">Inhabilitado</div>
+                      </md-switch>
+                    </md-card-title-text>
+                  </md-card-title>
+                </div>
+                <div layout="row" flex layout-align="end start">
+                  <md-fab-speed-dial md-direction="down" class="md-scale">
+                    <md-fab-trigger>
+                      <md-button aria-label="menu" class="md-fab md-primary">
+                        <md-icon class="material-icons">menu</md-icon>
+                      </md-button>
+                    </md-fab-trigger>
+                      
+                      <md-fab-actions>
+                        <md-button aria-label="delete" class="md-icon-button" ng-click="delete_local(local)">
+                          <md-icon class="material-icons">delete</md-icon>
+                        </md-button>
+                        <md-button aria-label="done" class="md-icon-button" ng-click="local.edit=!local.edit">
+                          <md-icon class="material-icons">mode_edit</md-icon>
+                        </md-button>
+                      </md-fab-actions>
+                  </md-fab-speed-dial>
+                  <md-button ng-show="local.edit"  class="md-raised md-primary" type="button" ng-click="edit_local(local)">Guardar</md-button>
+                  <md-button ng-show="local.edit" ng-click="local.edit=!local.edit" md-no-ink="md-no-ink">Cancelar</md-button>
+                </div>
+              </md-card>
+            </div>
         </md-content>
       </md-tab>
     </md-tabs>
