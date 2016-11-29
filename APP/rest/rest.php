@@ -265,24 +265,77 @@ $app->post('/new_usuario', function (Request $request, Response $response) {
     //echo($data);
     $bd=new DB();
     $rows = array();
-    $result=$bd->query("INSERT INTO usuario (usuario,pass,nombre,apellido,verificacion,habilitado,nacimiento,universidad,carrera,correo,celular,lvl_admin,bonus,certificado,Ciudad_idCiudad,local_idlocal) 
-    VALUES ( '".$data.['usuario']."','".md5($data["pass"])."','".$data["nombre"]."','".$data["apellido"].",0,1,'".$data["nacimiento"]."','".$data["universidad"]."','".$data["carrera"]."',
-    '".$data["correo"]."','".$data["celular"]."','".$data["lvl_admin"]."',0,'".$data["certificado"]."',".$data["Ciudad_idCiudad"].",".$data["local_idlocal"].")");
+    $result=$bd->query("INSERT INTO usuarios (usuario,pass,nombre,apellido,verificacion,habilitado,nacimiento,universidad,carrera,correo,celular,lvl_admin,bonos,certificado,Ciudad_idCiudad) VALUES ( '".$data["usuario"]."','".md5($data["pass"])."','".$data["nombre"]."','".$data["apellido"]."',0,1,'".$data["nacimiento"]."','".$data["universidad"]."','".$data["carrera"]."','".$data["correo"]."',".$data["numero"].",0,0,'certificado',".$data["ciudad"].")");
+    //echo($data);
     //$response->getBody()->write("Hello, $name");
     //print_r($result);
-    
     //echo($rows);
     $rows="ok";
     //echo json_encode($rows);
     $response->withJson($rows);
     return $response;
 });
+
+//update de info de usuario
+$app->post('/update_usuario', function (Request $request, Response $response) {
+    //$name = $request->getAttribute('name');
+    $data = $request->getParsedBody();
+    //echo($data);
+    $bd=new DB();
+    $rows = array();
+    $result=$bd->query("UPDATE usuarios SET nombre='".$data["nombre"]."',apellido='".$data["apellido"]."',universidad='".$data["universidad"]."',carrera='".$data["carrera"]."',correo='".$data["correo"]."',celular=".$data["numero"].",Ciudad_idCiudad=".$data["ciudad"]." where idusuario=".$data["id"]);
+    //echo($data);
+    //$response->getBody()->write("Hello, $name");
+    //print_r($result);
+    //echo($rows);
+    $rows="ok";
+    //echo json_encode($rows);
+    $response->withJson($rows);
+    return $response;
+});
+
+$app->post('/update_pass', function (Request $request, Response $response) {
+    //$name = $request->getAttribute('name');
+    $data = $request->getParsedBody();
+    //echo($data);
+    $bd=new DB();
+    $rows = array();
+    $result=$bd->query("UPDATE usuarios SET pass='".md5($data["pass"])."' where idusuario=".$data["id"]);
+    //echo($data);
+    //$response->getBody()->write("Hello, $name");
+    //print_r($result);
+    //echo($rows);
+    $rows="ok";
+    //echo json_encode($rows);
+    $response->withJson($rows);
+    return $response;
+});
+//Update para actualizar la verificación , habilitado , level admin , local y bonus
+$app->post('/update_admin', function (Request $request, Response $response) {
+    //$name = $request->getAttribute('name');
+    $data = $request->getParsedBody();
+    //echo($data);
+    $bd=new DB();
+    $rows = array();
+    $result=$bd->query("UPDATE usuarios SET verificacion=".$data["verificacion"].",habilitado=".$data["habilitado"].",lvl_admin=".$data["lvl_admin"].",bonos=".$data["bonos"].",local_idlocal=".$data["local"]." where idusuario=".$data["id"]);
+    //echo($data);
+    //$response->getBody()->write("Hello, $name");
+    //print_r($result);
+    //echo($rows);
+    $rows="ok";
+    //echo json_encode($rows);
+    $response->withJson($rows);
+    return $response;
+});
+
+
+
 //trae todos los usuarios
 $app->get('/get_usuarios', function (Request $request, Response $response) {
     $bd=new DB();
     $ROWS = array();
     $rows = array();
-    $result=$bd->query("select * from usuario ORDER BY usuario");
+    $result=$bd->query("select * from usuarios ORDER BY usuario");
     while($r = mysqli_fetch_assoc($result)) {
         $rows[] = $r;
     }
@@ -291,6 +344,22 @@ $app->get('/get_usuarios', function (Request $request, Response $response) {
     $response->withJson($ROWS);
     return $response;
 });
+//Trae un usuario dado su id -  HAX
+$app->get('/get_usuario/{id}', function (Request $request, Response $response) {
+    $data = $request->getAttribute('id');
+    $bd=new DB();
+    $ROWS = array();
+    $rows = array();
+    $result=$bd->query("select * from usuarios where idusuario=".$data);
+    while($r = mysqli_fetch_assoc($result)) {
+        $rows[] = $r;
+    }
+    $ROWS[]=$rows;
+    //echo json_encode($rows);
+    $response->withJson($ROWS);
+    return $response;
+});
+
 //trae todos los turnos que tiene un usuario
 $app->get('/get_turnos_user/{id}', function (Request $request, Response $response) {
     $data = $request->getAttribute('id');
@@ -334,9 +403,9 @@ $app->post('/signin', function (Request $request, Response $response) {
     $bd=new DB();
     $ROWS[]=$rows;
     $rows = array();
-    $result=$bd->query("INSERT INTO usuarios (usuario,pass,nombre,apellido,verificacion,habilitado,nacimiento,universidad,carrera,correo,celular,lvl_admin,bonus,Ciudad_idCiudad) 
-    VALUES ( '".$data.['usuario']."','".md5($data["pass"])."','".$data["nombre"]."','".$data["apellido"]."',0,1,'".$data["fecha"]."','".$data["universidad"]."','".$data["carrera"]."',
-    '".$data["correo"]."',".$data["celular"].",0,0,".$data["ciudad"].")");
+    $result=$bd->query("INSERT INTO usuarios (usuario,pass,nombre,apellido,verificacion,habilitado,nacimiento,universidad,carrera,correo,celular,lvl_admin,bonos,certificado,Ciudad_idCiudad,local_idlocal) 
+    VALUES ( '".$data.['usuario']."','".md5($data["pass"])."','".$data["nombre"]."','".$data["appellido"]."','0','1','".$data["fecha"]."','".$data["universidad"]."','".$data["carrera"]."',
+    '".$data["correo"]."','".$data["celular"]."','0','0','certificado.jpg','".$data["ciudad"]."')");
     $result=$bd->query("select * from usuarios where usuario=".$data['usuario']);
     while($r = mysqli_fetch_assoc($result)) {
         $rows[] = $r;

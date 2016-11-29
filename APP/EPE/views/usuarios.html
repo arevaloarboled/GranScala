@@ -1,0 +1,60 @@
+<div ng-cloak>
+  <md-content class="md-whiteframe-12dp">
+    <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
+      <md-tab label="Usuarios">
+        <md-content class="md-padding">
+        
+          <div ng-repeat="usuario in usuarios">
+            <md-card layout="row"  class="md-whiteframe-8dp">
+             <div layout="row" flex="30">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{usuario.usuario}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-actions ng-show="usuario.edit">
+                  <md-input-container>
+                      <label>verificacion</label>
+                      <input type="number" min=0 max=1 ng-model="usuario.verificacion" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>habilitado</label>
+                      <input type="number" min=0 max=1 ng-model="usuario.habilitado" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Bonos</label>
+                      <input type="number" min=0 ng-model="usuario.bonos" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Nivel admin</label>
+                      <input type="number" min=0 max=2 ng-model="usuario.lvl_admin" required/>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Local</label>
+                      <md-select ng-model="usuario.local_idlocal" required>
+                        <md-option ng-repeat="local in locales" value="{{local.idlocal}}">{{local.nombre}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    <md-content layout="column" class="md-padding">
+                    </md-input-container>
+                    <md-button class="md-raised md-primary" ng-click="edit_usuario(usuario)">Actualizar</md-button>
+                    <md-input-container>
+                </md-card-actions>
+              </div>
+              <div layout="row" flex layout-align="end center">
+                <md-fab-speed-dial md-direction="left" class="md-scale">
+                  <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-primary" ng-click="usuario.edit=!usuario.edit">
+                      <md-icon class="material-icons">menu</md-icon>
+                    </md-button>
+                  </md-fab-trigger>
+                </md-fab-speed-dial>
+              </div>
+            </md-card>
+          </div>
+          
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>

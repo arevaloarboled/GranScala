@@ -1,13 +1,56 @@
 <div ng-cloak>
   <md-content class="md-whiteframe-12dp">
-    <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
-      <md-tab label="Información del usuario">
-        <md-content class="md-padding">
-          
-        Aqui se presenta la información principal del Usuario segun su formulario de inscripscion. (Se debe poder editar)
-              
+    <div layout="column" layout-align="center center" layout-fill="layout-fill">
+      <div layout="column" class="loginBox md-whiteframe-12dp">
+        <md-toolbar md-colors="{background: 'grey-900'}">
+          <h2 class="md-toolbar-tools"><span>Usuario {{user}}</span></h2>
+        </md-toolbar>
+        <md-content layout="column" class="md-padding">
+          </md-input-container>
+          <md-button class="md-raised md-primary" ng-click="cambiar()">Cambiar contraseña</md-button>
+          <md-input-container>
+          <md-input-container>
+            <label>Nombre</label>
+            <input type="text" ng-model="nombre" name="nombre" required/>
+          </md-input-container>
+          <md-input-container>
+            <label>Apellido</label>
+            <input type="text" ng-model="appellido" name="appellido" required/>
+          </md-input-container>
+          <md-input-container>
+            <label>Universidad</label>
+            <input type="text" ng-model="universidad" name="universidad" required/>
+          </md-input-container>
+          <md-input-container>
+            <label>Carrera</label>
+            <input type="text" ng-model="carrera" name="carrera" required/>
+          </md-input-container>
+          <md-input-container>
+            <label>Correo</label>
+            <input type="email" ng-model="correo" name="correo" required/>
+          </md-input-container>
+          <md-input-container>
+            <label>Numero celular</label>
+            <input type="number" ng-model="numero" name="numero" required/>
+          </md-input-container>
+          <md-input-container>
+              <label>Pais</label>
+              <md-select ng-model="paiss">
+                <md-option value="null" ng-selected="true">Any</md-option>
+                <md-option ng-repeat="pais in paises" value="{{pais.idpais}}">{{pais.nombre}}</md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container>
+              <label>Ciudad</label>
+              <md-select ng-model="ciudad" name="ciudad" required>
+                <md-option ng-show="ciudad.pais_idpais == paiss || paiss=='null' " ng-repeat="ciudad in ciudades" value="{{ciudad.idCiudad}}">{{ciudad.nombre}}</md-option>
+              </md-select>
+          </md-input-container>
+          <div layout="row" layout-align="end center" style="padding-top:20px;">
+            <md-button class="md-raised md-primary" type="submit" name="submit" ng-click="send()">Actualizar</md-button>
+          </div>
         </md-content>
-      </md-tab>
-    </md-tabs>
+      </div>
+    </div>
   </md-content>
 </div>

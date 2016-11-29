@@ -1,8 +1,7 @@
-<form method="POST" action="../rest/rest.php/signin" enctype="multipart/form-data">
 <div layout="column" layout-align="center center" layout-fill="layout-fill">
   <div layout="column" class="loginBox md-whiteframe-12dp">
     <md-toolbar md-colors="{background: 'grey-900'}">
-      <h2 class="md-toolbar-tools"><span>Bienvenido!</span></h2>
+      <h2 class="md-toolbar-tools"><span>¡Bienvenido!</span></h2>
     </md-toolbar>
     <md-content layout="column" class="md-padding">
       <md-input-container>
@@ -55,12 +54,9 @@
             <md-option ng-show="ciudad.pais_idpais == paiss || paiss=='null' " ng-repeat="ciudad in ciudades" value="{{ciudad.idCiudad}}">{{ciudad.nombre}}</md-option>
           </md-select>
       </md-input-container>
-      <label>Certificado de estudio (subir una foto)</label>
-      <input type="file" name="file"  accept="image/*">
       <div layout="row" layout-align="end center" style="padding-top:20px;">
         <md-button class="md-raised md-primary" type="submit" name="submit" ng-click="send()">Enviar</md-button>
       </div>
     </md-content>
   </div>
 </div>
-</form>

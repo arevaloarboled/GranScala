@@ -70,7 +70,8 @@ function delete_cookie( name ) {
           templateUrl: 'views/faltas.html'
         })
         .when('/perfil', {
-          templateUrl: 'views/perfil.html'
+          templateUrl: 'views/perfil.html',
+          controller: 'perfil'
         })
         .when('/turnos', {
           templateUrl: 'views/turnos.html',
@@ -86,6 +87,10 @@ function delete_cookie( name ) {
         })
         .when('/horarios_local', {
           templateUrl: 'views/horarios_local.html'
+        })
+        .when('/usuarios', {
+          templateUrl: 'views/usuarios.html',
+          controller: 'usuarios'
         })
         .otherwise({
           redirectTo: '/'

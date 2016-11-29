@@ -40,7 +40,11 @@
         <i class="material-icons" flex="25">settings</i>
         <span class="md-body-1" flex><h4 style="text-align:center">Administrar</h4></span>
       </md-list-item>
-      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/turnos">
+      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/usuarios">
+        <i class="material-icons" flex="25">supervisor_account</i>
+        <span class="md-body-1" flex><h4 style="text-align:center">Usuarios</h4></span>
+      </md-list-item>
+      <md-list-item ng-click="openLeftMenu()" href="#/turnos">
         <i class="material-icons" flex="25">schedule</i>
         <span class="md-body-1" flex><h4 style="text-align:center">Turnos</h4></span>
       </md-list-item>
@@ -48,7 +52,7 @@
         <i class="material-icons" flex="25">error_outline</i>
         <span class="md-body-1" flex><h4 style="text-align:center">Faltas</h4></span>
       </md-list-item>
-      <md-list-item ng-if="lvl==2" ng-click="openLeftMenu()" href="#/perfil">
+      <md-list-item ng-click="openLeftMenu()" href="#/perfil">
         <i class="material-icons" flex="25">perm_identity</i>
         <span class="md-body-1" flex><h4 style="text-align:center">Perfil</h4></span>
       </md-list-item>
