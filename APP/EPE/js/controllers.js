@@ -357,6 +357,7 @@ epeControllers.controller('LogIn', ['$scope', '$http','$window','$mdDialog',
       };
       $scope.marcas=[];
       $scope.locales_user=[];
+      $scope.turnos=[];
       
       $scope.buscar=function(obj,element,value){
         for(var i in obj){
@@ -370,10 +371,18 @@ epeControllers.controller('LogIn', ['$scope', '$http','$window','$mdDialog',
       };
       
       $scope.search = function() {
-          $http.get('../rest/rest.php/get_turnos_user/'+getCookie("id")).then(function(data) {
+          $http.get('../rest/rest.php/get_locales_user/'+getCookie("id")).then(function(data) {
 		        data = data['data'];
 		        $scope.marcas=data[0];
 		        $scope.locales_user=data[1];
+		        console.log(data);
+          },(function (data) {
+              console.log('error');
+          }));
+          $http.get('../rest/rest.php/get_turnos_user/'+getCookie("id")).then(function(data) {
+		        data = data['data'];
+		        $scope.turnos=data[0];
+		        console.log(data);
           },(function (data) {
               console.log('error');
           }));
@@ -382,8 +391,9 @@ epeControllers.controller('LogIn', ['$scope', '$http','$window','$mdDialog',
       $scope.search();
   }]);
   
-  
-  
+
+
+
   epeControllers.controller('usuarios', ['$scope', '$http','$window','$mdDialog','$mdToast','$mdSidenav',
   function ($scope, $http,$window,$mdDialog,$mdToast,$mdSidenav) {
       

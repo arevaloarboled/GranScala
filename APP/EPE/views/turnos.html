@@ -1,4 +1,56 @@
-<div ng-cloak>
+<div ng-cloak ng-show="lvl==2">
+  <md-content class="md-whiteframe-12dp">
+    <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
+      <md-tab label="Consultar Turnos">
+        <md-content class="md-padding">
+          <div>
+            <md-input-container>
+            <label>Marca</label>
+              <md-select ng-model="Marca">
+                <md-option value="null" ng-selected="true">Any</md-option>
+                <md-option ng-repeat="marca in marcas" value="{{marca.idsupermercado}}">{{marca.nombre}}</md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container>
+              <label>Nombre</label>
+              <input type="text" value="" ng-model="nombre"/>
+            </md-input-container>
+            </div>
+            <div ng-repeat="local in locales_user">
+              <md-card ng-show="(local.nombre.indexOf(nombre)!=-1 || nombre=='' || nombre==undefined) &&  (local.supermercado_idsupermercado == Marca || Marca=='null')" layout="row" class="md-whiteframe-8dp">
+                <div layout="row" flex="30">
+                  <md-card-title>
+                    <md-card-title-text ng-show="!local.edit">
+                      <span class="md-headline">{{local.nombre}}</span>
+                      <span class="md-subhead">{{buscar(marcas,'idsupermercado',local.supermercado_idsupermercado).nombre}}</span>
+                      <span class="md-subhead">{{local.direccion}}</span>
+                    </md-card-title-text>
+                  </md-card-title>
+                </div>
+                <div layout="row" flex layout-align="end center">
+                  <md-button href="#/horarios_local" md-no-ink="md-no-ink" class="md-primary">
+                    Ir al Local
+                    <md-icon class="material-icons">store</md-icon>
+                  </md-button>
+                </div>
+              </md-card>
+            </div>
+    
+        </md-content>
+      </md-tab>
+      <md-tab label="Mis Turnos">
+        <md-content class="md-padding">
+          
+        Aquí se presentan los turnos que posee el usuario  
+        
+              
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+
+<div ng-cloak ng-show="lvl==1">
   <md-content class="md-whiteframe-12dp">
     <md-tabs md-dynamic-height md-border-bottom md-colors="{background: 'grey-800'}" id="Administrar_tab">
       <md-tab label="Consultar Turnos">
